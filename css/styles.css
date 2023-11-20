@@ -55,6 +55,7 @@ main {
 .player {
   font-size: 2em;
   color: #575757;
+  font-weight: 900;
 }
 
 .current {
@@ -99,11 +100,11 @@ main {
 }
 
 button {
-  width: 17em;
+  width: auto;
   height: 3em;
   position: absolute;
   background: none;
-  border: 1px solid red;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,6 +113,16 @@ button {
   transform: translateX(-50%);
   left: 50%;
   text-transform: uppercase;
+  cursor: pointer;
+  color: #575757;
+}
+
+.new__game-svg,
+.roll__dice-svg,
+.hold__score-svg {
+  width: 2em;
+  height: 2em;
+  fill: none;
 }
 
 .new__game {
@@ -119,9 +130,26 @@ button {
 }
 
 .roll__dice {
-  top: 80%;
+  top: 76%;
 }
 
 .hold__score {
   top: 87%;
 }
+
+button.roll__dice:hover > .roll__dice-svg {
+  animation: rotate 3s linear infinite;
+}
+
+button.roll__dice:hover,
+button.new__game:hover,
+button.hold__score:hover {
+  text-shadow: 0 0 .4em #252525;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+
