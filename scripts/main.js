@@ -1,0 +1,1 @@
+console.info('Dice game V0.5')
