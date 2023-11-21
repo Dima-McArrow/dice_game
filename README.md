@@ -1,6 +1,6 @@
-# Jeux de des
+# Jeu de dé
 
-Developpe avec:
+Développé avec:
 
  - HTML
  - CSS

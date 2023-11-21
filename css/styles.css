@@ -153,3 +153,6 @@ button.hold__score:hover {
   }
 }
 
+.hidden {
+  display: none !important;
+}
