@@ -22,16 +22,17 @@ main {
   position: relative;
 }
 
-#playerOne, #playerTwo {
+#player-0, #player-1 {
   display: flex;
   flex-direction: column;
   gap: 5em;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  position: relative;
 }
 
-#playerOne {
+#player-0 {
   /* border: 1px solid red; */
   width: 50%;
   height: 100%;
@@ -39,12 +40,24 @@ main {
   opacity: .5;
 }
 
-#playerTwo {
+#player-1 {
   /* border: 1px solid red; */
   width: 50%;
   height: 100%;
   background-color: white;
   opacity: .5;
+}
+
+#red-dot-0,
+#red-dot-1 {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 23.3%;
+  left: 73%;
+  opacity: 1;
 }
 
 .score {

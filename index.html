@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu de dés (HTML, CSS, JavaScript)</title>
+    <title>Jeu de dé (HTML, CSS, JavaScript)</title>
     <link rel="shortcut icon" href="./images/dice-favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,20 +40,22 @@
         </svg>
         Nouveau Jeu
       </button>
-      <section id="playerOne" class="active">
+      <section id="player-0">
         <h2 class="player">Joueur 1</h2>
-        <p id="score__player-0" class="score">0</p>
+        <div id="red-dot-0"></div>
+        <p id="score__player-0" class="score"></p>
         <div class="current">
           <p>Courant</p>
-          <p id="current_score__player-0" class="current__score">0</p>
+          <p id="current_score__player-0" class="current__score"></p>
         </div>
       </section>
-      <section id="playerTwo">
+      <section id="player-1">
         <h2 class="player">Joueur 2</h2>
-        <p id="score__player-1" class="score">0</p>
+        <div id="red-dot-1" class="hidden"></div>
+        <p id="score__player-1" class="score"></p>
         <div class="current">
           <p>Courant</p>
-          <p id="current_score__player-1" class="current__score">0</p>
+          <p id="current_score__player-1" class="current__score"></p>
         </div>
       </section>
       <div id="dice" class="hidden">
