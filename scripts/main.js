@@ -1,4 +1,4 @@
-console.info('Dice game V0.8')
+console.info('Dice game V0.9')
 
 // Score Player One
 const scoreOne = document.getElementById('score__player-0')
@@ -16,22 +16,18 @@ const rollButton = document.getElementById('roll__dice')
 // Hold button
 const holdButton = document.querySelector('.hold__score')
 
-// Current score Player 1 HTML
-const pOneCurCont = document.getElementById('current_score__player-0')
-
-// Current score Player 2 HTML
-const pTwoCurCont = document.getElementById('current_score__player-1')
-
 // Initialization of the score at 0
 let currentScore = 0
 
 // Active player
 let activePlayer = 0
 
+// Scores
+let scores = [0, 0]
 
 console.info('button:', rollButton)
 
-// Random num gen
+// Random num gen function
 const dice = () => {
   return (Math.floor(Math.random() * 6) + 1)
 }
@@ -42,6 +38,19 @@ const rollDiceVisual = (dice) => {
   cont.classList.remove('hidden')
   let content = `<img src="./images/dice-${dice}.svg" alt="dice" />`
   cont.innerHTML = content
+}
+
+// Switch player function
+const switchPlayer = () => {
+  // Active player deactivation
+  document.getElementById(`current_score__player-${activePlayer}`).textContent = 0
+  document.getElementById(`player-${activePlayer}`).classList.remove('active')
+  pOneAct.classList.toggle('hidden')
+  pTwoAct.classList.toggle('hidden')
+  // Switching player
+  activePlayer = activePlayer === 0 ? 1 : 0
+  // Current score reset
+  currentScore = 0
 }
 
 // Roll button action
@@ -60,15 +69,29 @@ rollButton.addEventListener('click', (e) => {
     document.getElementById(`current_score__player-${activePlayer}`).textContent = currentScore
     // pOneCurCont.textContent = currentScore
   } else {
-    // Active player deactivation
-    document.getElementById(`current_score__player-${activePlayer}`).textContent = 0
-    document.getElementById(`player-${activePlayer}`).classList.remove('active')
-    pOneAct.classList.toggle('hidden')
-    pTwoAct.classList.toggle('hidden')
-    // document.getElementById(`red-dot-${activePlayer}`).classList.toggle('hidden')
     // Switching player
-    activePlayer = activePlayer === 0 ? 1 : 0
-    // Score reset
-    currentScore = 0
+    switchPlayer()
+  }
+})
+
+// Hold button action
+holdButton.addEventListener('click', (e) => {
+  // Prevent defaul
+  e.preventDefault()
+  scores[activePlayer] += currentScore
+  document.getElementById(`score__player-${activePlayer}`).textContent = scores[activePlayer]
+  console.info('score:', scores)
+  if (scores[activePlayer] >= 100) {
+    document.getElementById(`player-${activePlayer}`).classList.add('winner')
+    document.querySelector('.current-0').classList.add('hidden')
+    document.querySelector('.current-1').classList.add('hidden')
+    document.querySelector(`.winner-${activePlayer}`).classList.remove('hidden')
+    document.getElementById(`red-dot-${activePlayer}`).classList.add('hidden')
+    document.getElementById('dice').classList.add('hidden')
+    document.getElementById('roll__dice').classList.add('hidden')
+    document.querySelector('.hold__score').classList.add('hidden')
+  } else {
+    // Switching player
+    switchPlayer()
   }
 })

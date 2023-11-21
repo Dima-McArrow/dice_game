@@ -1,6 +1,6 @@
 # Jeu de dé
 
-Développé avec:
+Développé par Dimitri Makarov, avec:
 
  - HTML
  - CSS

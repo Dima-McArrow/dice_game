@@ -22,6 +22,13 @@ main {
   position: relative;
 }
 
+.player_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
 #player-0, #player-1 {
   display: flex;
   flex-direction: column;
@@ -54,9 +61,6 @@ main {
   height: 1em;
   border-radius: 50%;
   background-color: red;
-  position: absolute;
-  top: 23.3%;
-  left: 73%;
   opacity: 1;
 }
 
@@ -71,7 +75,8 @@ main {
   font-weight: 900;
 }
 
-.current {
+.current-0,
+.current-1 {
   /* border: 1px solid red; */
   width: 13em;
   height: 7em;
@@ -90,6 +95,17 @@ main {
 
 .active {
   opacity: .8 !important;
+}
+
+.winner-0,
+.winner-1 {
+  color: #fe940f;
+  font-size: .5em;
+}
+
+.winner {
+  background-color: #252525 !important;
+  opacity: .9 !important;
 }
 
 #dice {
@@ -140,14 +156,15 @@ button {
 
 .new__game {
   top: 5%;
+  color: #fe940f;
 }
 
 .roll__dice {
-  top: 76%;
+  top: 82%;
 }
 
 .hold__score {
-  top: 87%;
+  top: 91%;
 }
 
 button.roll__dice:hover > .roll__dice-svg {
