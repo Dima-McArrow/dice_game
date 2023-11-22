@@ -8,9 +8,30 @@
     <link rel="stylesheet" href="./css/landing.css">
   </head>
   <body>
-    <h1>Bienvenue, </h1>
-    <h2>Veuillez choisir la version du jeu:</h2>
-    <a href="./html/css_version.html" target="_blank">Version realisee avec du CSS pure (vanilla)</a>
-    <a href="./html/bs_version.html" target="_blank">Version realisee avec le framework CSS Bootstrap</a>
+    <div class="cont">
+      <h1>Bienvenue.</h1>
+      <p>Evaluation Studi</p>
+      <p>Réalisée par Dimitri Makarov. Novembre 2023</p>
+      <p>Jeu de dé.</p>
+      <p>Règles :</p>
+      <p>
+        Le jeu comprend 2 joueurs sur un seul et même écran.<br />
+        Chaque joueur possède un score temporaire (COURANT) et un score global (GLOBAL).<br />
+        À chaque tour, le joueur a son COURANT initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au COURANT.<br />
+        Lors de son tour, le joueur peut décider à tout moment de:<br />
+      </p>
+      <ul>
+        <li>Cliquer sur l’option “Hold” ("Passer la main"), qui permet d’envoyer les points du COURANT vers le GLOBAL. Ce sera alors le tour de l’autre joueur.</li>
+        <li>Lancer le dé. S’il obtient un 1, son score COURANT est perdu et c’est la fin de son tour.</li>
+      </ul>
+        <p>
+          Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+        </p>
+    </div>
+    <div class="cont">
+      <h2>Veuillez choisir la version du jeu:</h2>
+      <a href="./html/css_version.html" target="_blank">Version realisée avec du CSS pure (vanilla)</a>
+      <a href="./html/bs_version.html" target="_blank">Version realisée avec le framework CSS Bootstrap</a>
+    </div>
   </body>
 </html>

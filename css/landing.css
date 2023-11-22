@@ -17,13 +17,48 @@ body {
   gap: 2em;
 }
 
+.cont {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 2em 3em 2em 3em;
+  background: rgba(71, 71, 71, 0.7);
+  border-radius: 1em;
+  box-shadow: 0 0 1em #252525;
+  margin: 1em 5em .5em 5em;
+  text-shadow: 0 0 1em #252525;
+}
+
 h1 {
   font-size: 3em;
   color: #fe940f;
-  text-shadow: 0 0 1em #252525;
 }
 
 h2 {
   font-size: 2em;
-  color: #252525;
+  color: #fe940f;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a:hover {
+  text-shadow: 0 0 .7em #252525;
+  color: #fe940f;
+}
+
+p {
+  color: antiquewhite;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+ul {
+  color: antiquewhite;
 }
