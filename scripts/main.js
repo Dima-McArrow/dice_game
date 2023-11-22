@@ -1,4 +1,4 @@
-console.info('Dice game V0.9')
+console.info('Dice game V1.0')
 
 // Score Player One
 const scoreOne = document.getElementById('score__player-0')
@@ -9,12 +9,14 @@ const scoreTwo = document.getElementById('score__player-1')
 scoreTwo.textContent = 0
 let pTwoAct = document.getElementById('red-dot-1')
 
-
 // Roll button
 const rollButton = document.getElementById('roll__dice')
 
 // Hold button
 const holdButton = document.querySelector('.hold__score')
+
+// New Game button
+const newGame = document.querySelector('.new__game')
 
 // Initialization of the score at 0
 let currentScore = 0
@@ -24,8 +26,6 @@ let activePlayer = 0
 
 // Scores
 let scores = [0, 0]
-
-console.info('button:', rollButton)
 
 // Random num gen function
 const dice = () => {
@@ -60,14 +60,12 @@ rollButton.addEventListener('click', (e) => {
   // Dice roll
   let diceNum = dice()
   rollDiceVisual(diceNum)
-  console.info('dice:', diceNum)
   // Player plays
   if (diceNum !== 1) {
     currentScore += diceNum
     // Active player activation
     document.getElementById(`player-${activePlayer}`).classList.add('active')
     document.getElementById(`current_score__player-${activePlayer}`).textContent = currentScore
-    // pOneCurCont.textContent = currentScore
   } else {
     // Switching player
     switchPlayer()
@@ -80,7 +78,6 @@ holdButton.addEventListener('click', (e) => {
   e.preventDefault()
   scores[activePlayer] += currentScore
   document.getElementById(`score__player-${activePlayer}`).textContent = scores[activePlayer]
-  console.info('score:', scores)
   if (scores[activePlayer] >= 100) {
     document.getElementById(`player-${activePlayer}`).classList.add('winner')
     document.querySelector('.current-0').classList.add('hidden')
@@ -94,4 +91,12 @@ holdButton.addEventListener('click', (e) => {
     // Switching player
     switchPlayer()
   }
+})
+
+// New Game button action
+newGame.addEventListener('click', (e) => {
+  // Prevent default
+  e.preventDefault()
+  // Reloading the page
+  window.location.reload()
 })
