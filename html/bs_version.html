@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de dé (HTML, Bootstrap, JavaScript)</title>
+  <link rel="shortcut icon" href="../images/dice-favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(90deg, rgb(255, 166, 0), rgb(84, 235, 84));
+      display: flex;
+    }
+
+    #dice {
+      width: 4.9em;
+      height: 4.9em;
+      border-radius: 1em;
+      background-color: white;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0em 0em 1em #575757;
+    }
+    
+    #dice img {
+      width: 6em;
+      height: 6em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid p-5">
+    <div class="row">
+      <button class="btn btn-danger w-25 m-auto mt-4 mb-4" type="button">New Game</button>
+    </div>
+    <div class="row h-100">
+      <div class="col d-flex flex-column gap-3 bg-light-subtle opacity-75 align-items-center justify-content-center p-5">
+        <h2 class="h2">Player 1 <span class="badge bg-danger">Playing</span></h2>
+        <p class="h1 text-danger">0</p>
+        <div class="card" id="current_p1">
+          <div class="card-header">
+            Courrent
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">0</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex flex-column gap-3 bg-light opacity-50 align-items-center justify-content-center p-5">
+        <h2 class="h2">Player 2 <span class="badge bg-danger visually-hidden">Playing</span></h2>
+        <p class="h1 text-danger">0</p>
+        <div class="card" id="current_p2">
+          <div class="card-header">
+            Courrent
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">0</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-warning w-25 m-auto mt-4" type="button">Roll dice</button>
+    </div>
+    <div class="row">
+      <button class="btn btn-success w-25 m-auto mt-4 mb-5" type="button">Hold</button>
+    </div>
+  </div>
+  <div id="dice">
+    <img src="../images/dice-1.svg" alt="dice" />
+  </div>
+</body>
+</html>

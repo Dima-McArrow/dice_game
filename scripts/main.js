@@ -36,7 +36,7 @@ const dice = () => {
 const rollDiceVisual = (dice) => {
   const cont = document.getElementById('dice')
   cont.classList.remove('hidden')
-  let content = `<img src="./images/dice-${dice}.svg" alt="dice" />`
+  let content = `<img src="../images/dice-${dice}.svg" alt="dice" />`
   cont.innerHTML = content
 }
 
