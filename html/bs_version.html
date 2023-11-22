@@ -63,27 +63,27 @@
       </button>
     </div>
     <div class="row h-75">
-      <div class="col d-flex flex-column gap-3 bg-light-subtle align-items-center justify-content-center p-5">
-        <h2 class="h2">Player 1 <span class="badge bg-danger">Playing</span></h2>
+      <div class="col d-flex flex-column gap-3 bg-light align-items-center justify-content-center p-5" id="p-0">
+        <h2 class="h2">Player 1 <span class="badge bg-danger badge-0 b-playing-0">Playing</span><span class="badge bg-warning badge-0 visually-hidden winner-0">Winner!</span></h2>
         <p class="h1 text-danger" id="score__player-0"></p>
+        <div class="card" id="current_p0">
+          <div class="card-header">
+            Courrent
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="current_score__player-0"></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex flex-column gap-3 bg-light opacity-75 align-items-center justify-content-center p-5" id="p-1">
+        <h2 class="h2">Player 2 <span class="badge bg-danger badge-1 b-playing-1 visually-hidden">Playing</span><span class="badge bg-warning badge-0 visually-hidden winner-1">Winner!</span></h2>
+        <p class="h1 text-danger" id="score__player-1"></p>
         <div class="card" id="current_p1">
           <div class="card-header">
             Courrent
           </div>
           <div class="card-body">
-            <h5 class="card-title">0</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col d-flex flex-column gap-3 bg-light opacity-75 align-items-center justify-content-center p-5">
-        <h2 class="h2">Player 2 <span class="badge bg-danger visually-hidden">Playing</span></h2>
-        <p class="h1 text-danger" id="score__player-1"></p>
-        <div class="card" id="current_p2">
-          <div class="card-header">
-            Courrent
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">0</h5>
+            <h5 class="card-title" id="current_score__player-1"></h5>
           </div>
         </div>
       </div>
