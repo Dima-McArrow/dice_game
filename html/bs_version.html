@@ -15,12 +15,12 @@
     }
 
     #dice {
-      width: 4.9em;
-      height: 4.9em;
+      width: 3.3em;
+      height: 3.3em;
       border-radius: 1em;
       background-color: white;
       position: absolute;
-      top: 57.3%;
+      top: 44.3%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -30,18 +30,18 @@
     }
     
     #dice img {
-      width: 6em;
-      height: 6em;
+      width: 4em;
+      height: 4em;
     }
   </style>
 </head>
 <body>
-  <div class="container-fluid p-5">
-    <div class="row">
-      <button class="btn btn-danger w-25 m-auto mt-4 mb-4" type="button">New Game</button>
+  <div class="container p-4">
+    <div class="row mb-2">
+      <button class="btn btn-danger w-auto m-auto" type="button">New Game</button>
     </div>
-    <div class="row h-100">
-      <div class="col d-flex flex-column gap-3 bg-light-subtle opacity-75 align-items-center justify-content-center p-5">
+    <div class="row h-75">
+      <div class="col d-flex flex-column gap-3 bg-light-subtle align-items-center justify-content-center p-5">
         <h2 class="h2">Player 1 <span class="badge bg-danger">Playing</span></h2>
         <p class="h1 text-danger">0</p>
         <div class="card" id="current_p1">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="col d-flex flex-column gap-3 bg-light opacity-50 align-items-center justify-content-center p-5">
+      <div class="col d-flex flex-column gap-3 bg-light opacity-75 align-items-center justify-content-center p-5">
         <h2 class="h2">Player 2 <span class="badge bg-danger visually-hidden">Playing</span></h2>
         <p class="h1 text-danger">0</p>
         <div class="card" id="current_p2">
@@ -66,11 +66,13 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <button class="btn btn-warning w-25 m-auto mt-4" type="button">Roll dice</button>
-    </div>
-    <div class="row">
-      <button class="btn btn-success w-25 m-auto mt-4 mb-5" type="button">Hold</button>
+    <div class="row mt-5">
+      <div class="col d-flex align-items-center">
+        <button class="btn btn-warning w-auto m-auto mt-4" type="button">Roll dice</button>
+      </div>
+      <div class="col d-flex align-items-center">
+        <button class="btn btn-success w-auto m-auto mt-4 mb-5" type="button">Hold</button>
+      </div>
     </div>
   </div>
   <div id="dice">
